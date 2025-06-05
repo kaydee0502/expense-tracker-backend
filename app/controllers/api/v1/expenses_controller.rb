@@ -5,7 +5,7 @@ module Api
 
       # GET /expenses
       def index
-        @expenses = Expense.all
+        @expenses = Expense.order(id: :desc).all
 
         render json: @expenses
       end

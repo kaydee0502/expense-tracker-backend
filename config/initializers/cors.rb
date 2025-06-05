@@ -9,10 +9,10 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     # In development, allow requests from common frontend development servers
     if Rails.env.development?
-      origins 'localhost:3000', 'localhost:3001', 'localhost:4200', 'localhost:8000', '127.0.0.1:3000'
+      origins 'localhost:3000', 'localhost:3001', 'localhost:4200', 'localhost:8000', '127.0.0.1:3000', 'kaydee0502.github.io'
     elsif Rails.env.production?
       # Replace with your actual frontend domain(s)
-      origins ENV.fetch('FRONTEND_URL', 'https://your-frontend-domain.com')
+      origins ENV.fetch('FRONTEND_URL', 'kaydee0502.github.io')
     else
       # Test environment
       origins '*'
